@@ -1,0 +1,9 @@
+error.email=Invalid e-mail format
+error.invalidEnumCode=Invalid enum code
+
+signIn.errors.userNotFound=User with such credentials not found
+
+signUp.errors.invalidFirstName=Invalid first name
+signUp.errors.invalidLastName=Invalid last name
+signUp.errors.invalidPassword=Password must contain digit, lowercase and uppercase symbol
+signUp.errors.invalidConfirmPassword=Passwords must match

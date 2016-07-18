@@ -1,0 +1,38 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+# Auth
+POST        /signIn                                   controllers.AuthorizationController.signIn
+POST        /signUp                                   controllers.AuthorizationController.signUp
+POST        /logout                                   controllers.AuthorizationController.logout
+
+# Pair request
+GET         /pairRequests                             controllers.PairRequestsController.list
+POST        /pairRequests                             controllers.PairRequestsController.create
+POST        /pairRequests/answer                      controllers.PairRequestsController.answerToRequest
+
+# Devices
+GET         /devices                                  controllers.DevicesController.list
+POST        /devices                                  controllers.DevicesController.create
+GET         /gen                                      controllers.DevicesController.genData
+GET         /weekly                                   controllers.DevicesController.recount
+
+# Users
+GET         /users/patients                           controllers.UsersController.patients
+GET         /users/myDoctors                          controllers.UsersController.myDoctors
+GET         /users/doctors                            controllers.UsersController.doctors
+
+# Profile
+GET         /profile                                  controllers.ProfileController.profile
+POST        /profile                                  controllers.ProfileController.editProfile
+GET         /medicalCard                              controllers.ProfileController.medicalCard
+POST        /medicalCard                              controllers.ProfileController.editMedicalCard
+
+# Fitbit
+#GET         /fitbitAuth                               controllers.fitbit.FitbitAuthController.requestAuth
+#ET         /fitbitCallback                           controllers.fitbit.FitbitAuthController.callback(code: Option[String], state: Option[String])
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                             controllers.Assets.at(path="/public", file)
